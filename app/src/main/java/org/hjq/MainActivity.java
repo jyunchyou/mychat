@@ -54,7 +54,7 @@ public class MainActivity extends Activity
       
     
 
-       Toast.makeText(this,cacheUserName+cachePassword,Toast.LENGTH_SHORT).show();
+     //  Toast.makeText(this,editTextUserName.toString(),Toast.LENGTH_SHORT).show();
         //注册观察
         buttonLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -65,17 +65,20 @@ public class MainActivity extends Activity
                     String userName = editTextUserName.getText().toString();
 
                     String password = editTextPassword.getText().toString();
-                    Toast.makeText(MainActivity.this,userName+password,Toast.LENGTH_LONG).show();
-                    if (userName.indexOf("&") != -1 || password.indexOf("&") != -1){
-                        Toast.makeText(MainActivity.this,"用户名或密码不能包含'&'",Toast.LENGTH_SHORT).show();
-                        
-                    }
+                //    Toast.makeText(MainActivity.this,userName+password,Toast.LENGTH_LONG).show();
+                  
                     if (userName == null || "".equals(userName) ||password == null || "".equals(password)){
                         
                         Toast.makeText(MainActivity.this,"用户名或密码不能为空",Toast.LENGTH_SHORT).show();
 
                         
-                    }else if(!userName.equals(cacheUserName) || !password.equals(cachePassword))
+                    }
+                    else if (userName.indexOf("&") != -1 || password.indexOf("&") != -1){
+                        Toast.makeText(MainActivity.this,"用户名或密码不能包含'&'",Toast.LENGTH_SHORT).show();
+
+                    }
+                    
+                    else if(!userName.equals(cacheUserName) || !password.equals(cachePassword))
                     {
                         
 

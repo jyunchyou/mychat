@@ -93,7 +93,7 @@ public class MessageStorage {
 
         }
         String userData = String.valueOf(buffer);
-    String word = userData.substring(userData.indexOf("&") + 1,userData.length());
+    String word = userData.substring(userData.indexOf("&") + 1,userData.length()).trim();
     
     fileReader.close();
     return word;
@@ -118,7 +118,7 @@ public class MessageStorage {
 
         }
         
-        String name = userData.substring(0,userData.indexOf("&"));
+        String name = userData.substring(0,userData.indexOf("&")).trim();
         fileReader.close();
         
         return name;
