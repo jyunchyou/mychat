@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">My Application</string>
+    <string name="userUame">用户名：</string>
+    <string name="password">密&#160;&#160;&#160;&#160;码：</string>
+    <string name="back">返回</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <integer name="maxLines">1</integer>
 
-    <string name="app_name">mychat</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="maxLines">1</string>
 
+    <string name="storagePath">user</string>
 </resources>

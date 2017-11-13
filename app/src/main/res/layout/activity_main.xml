@@ -1,0 +1,96 @@
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+       >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="30px"
+                android:textSize="40px"
+                android:text="@string/userUame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editLoginTextUserName"
+                android:layout_marginTop="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="@string/maxLines"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="30px"
+                android:textSize="40px"
+                android:text="@string/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editLoginTextPassword"
+                android:inputType="textPassword"
+                android:layout_marginTop="30px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="@string/maxLines"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+
+                android:id="@+id/buttonLogin"
+                android:text="@string/login"
+                android:layout_marginLeft="30pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textLogin"
+                android:textSize="50px"
+                android:background="@color/buttonLogin"
+                />
+
+         
+
+            <Button
+                android:id="@+id/buttonRegister" 
+                android:text="@string/register"
+                android:layout_marginLeft="30pt"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textRegister"
+                android:textSize="50px"
+                android:background="@color/buttonRegister"
+
+            />
+            
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
