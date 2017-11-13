@@ -8,4 +8,5 @@
     <color name="textRegister">#FFFFFF</color>
     <color name="buttonLogin">#00BFFF</color>
     <color name="buttonRegister">#00BFFF</color>
+    <color name="contactBgm">#FFFFFF</color>
 </resources>

@@ -88,6 +88,10 @@ public class MainActivity extends Activity
                         
                     }else{
                         //跳转
+                        Intent intent = new Intent(MainActivity.this,ContactActivity.class);
+
+                        startActivity(intent);
+                        
                         
                         
                     }

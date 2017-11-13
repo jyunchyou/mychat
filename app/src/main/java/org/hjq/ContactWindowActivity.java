@@ -9,7 +9,5 @@ public class ContactWindowActivity extends Activity {
     {
         super.onCreate(savedInstanceState);
     }
-}
 
-{
 }
