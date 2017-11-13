@@ -14,13 +14,29 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.graphics.drawable.Drawable;
+import android.widget.ExpandableListView.OnChildClickListener;
+import android.content.Intent;
 
 public class ContactActivity extends Activity {
     
     private ExpandableListView listview = null;
 
     
- 
+    private String[] group = new String[]{"流年","未命名"};
+    private String[][] childs= new String[][]{{ "唐磊","李子豪","黄涵芝", "冉智力","黄关月","邓巍靓","刘畅","唐子壹","袁志智"},
+        {"brianway","codefowllower","一群手抓饼","Vczh","BYVoid","左耳朵耗子"}};
+
+    private int[] images = {R.drawable.male01, 
+        R.drawable.male02,
+        R.drawable.male03,
+        R.drawable.male04,
+        R.drawable.male05,
+        R.drawable.male06,
+        R.drawable.male07,
+        R.drawable.male08,
+        R.drawable.male09
+    };
+    
         
     
     @Override
@@ -33,9 +49,24 @@ public class ContactActivity extends Activity {
     
     listview = (ExpandableListView) findViewById(R.id.elv);
     MyExpandableListViewAdapter    adapter = new MyExpandableListViewAdapter(this);
+ 
+    
     listview.setAdapter(adapter);
     
-  
+        listview.setOnChildClickListener(new OnChildClickListener() {
+
+                @Override
+                public boolean onChildClick(ExpandableListView parent, View v,
+                                            int groupPosition, int childPosition, long id) {
+                    Intent intent = new Intent(ContactActivity.this,ContactWindowActivity.class);
+                    
+                    intent.putExtra("contactName",childs[groupPosition][childPosition]);
+                    startActivity(intent);
+                    return true;
+                }
+            });
+    
+ 
         
 }
 
@@ -49,21 +80,7 @@ public class ContactActivity extends Activity {
         private Context context;
         /* 布局填充器*/
         private LayoutInflater inflater;
-        private String[] group = new String[]{"流年","未命名"};
-        private String[][] childs= new String[][]{{ "唐磊","李子豪","黄涵芝", "冉智力","黄关月","邓巍靓","刘畅","唐子壹","袁志智"},
-            {"brianway","codefowllower","一群手抓饼","Vczh","BYVoid","左耳朵耗子"}};
-            
-        private int[] images = {R.drawable.male01, 
-            R.drawable.male02,
-            R.drawable.male03,
-            R.drawable.male04,
-            R.drawable.male05,
-            R.drawable.male06,
-            R.drawable.male07,
-            R.drawable.male08,
-            R.drawable.male09
-        };
-
+    
         /* 构造,因为布局填充器填充布局需要使用到Context,通过构造来传递 */
         public MyExpandableListViewAdapter (Context context){
             this.context = context;
