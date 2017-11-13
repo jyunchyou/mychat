@@ -20,9 +20,18 @@
         <activity
             android:name=".RegisterActivity">
         </activity>
+        <activity
+            android:name=".ContactWindowActivity">
+            
+        </activity>
+        <activity
+            android:name=".ContactActivity">
+        </activity>
+            
+    </application>
     
      
-    </application>
+    
     
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>  
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> 
