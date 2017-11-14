@@ -63,7 +63,7 @@ public class ChatAdapter extends BaseAdapter {
 
     @Override
     public View getView(int arg0, View arg1, ViewGroup arg2) {
-        // TODO Auto-generated method stub
+        
         HolderView holderView = null;
         PersonChat entity = lists.get(arg0);
         boolean isMeSend = entity.isMeSend();
@@ -78,7 +78,9 @@ public class ChatAdapter extends BaseAdapter {
             } else {
                 arg1 = View.inflate(context, R.layout.chat_dialog_left_item,
                                     null);
+                                   holderView.tv_chat_me_message = (TextView) arg1.findViewById(R.id.tvname);
 
+                                   holderView.tv_chat_me_message.setText(entity.getChatMessage());
             }
             arg1.setTag(holderView);
         } else {
