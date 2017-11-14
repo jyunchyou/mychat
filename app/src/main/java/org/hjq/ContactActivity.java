@@ -22,6 +22,7 @@ public class ContactActivity extends Activity {
     private ExpandableListView listview = null;
 
     
+    
     private String[] group = new String[]{"流年","未命名"};
     private String[][] childs= new String[][]{{ "唐磊","李子豪","黄涵芝", "冉智力","黄关月","邓巍靓","刘畅","唐子壹","袁志智"},
         {"brianway","codefowllower","一群手抓饼","Vczh","BYVoid","左耳朵耗子"}};
